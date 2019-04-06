@@ -1,0 +1,53 @@
+Past Code.	
+
+	// cout << "Menu: \n";
+	// const int position_beginning_of_menu = 911;
+	// const int white_space_to_get_content_in_menu = 13;
+	// const int end_of_menu = 1036;
+	// string line;
+
+	// int position;
+	// char character;
+	// // We're in the menu
+	// myfile.seekg(position_beginning_of_menu);
+	// getline(myfile, line);
+
+	// myfile.seekg(white_space_to_get_content_in_menu, ios::cur);
+	// int choice_order = 1;
+	// cout << choice_order << ". ";
+	// while ((position = (int)myfile.tellg()) <= end_of_menu){
+	// 	myfile.get(character);
+	// 	if (character == '\n'){
+	// 		cout << character;
+	// 		cout << ++choice_order << ". ";
+	// 		myfile.seekg(white_space_to_get_content_in_menu, ios::cur);
+	// 	} else if (character == '\"' or character == ','){
+	// 		cout << " ";
+	// 	} else {
+	// 		cout << character;
+	// 	}
+	// }
+
+
+	// const int white_space_to_get_content_in_welcome = 14;
+	// const int position_begining_of_welcome = 137;
+	// const iC++nt  end_of_welcome = 906;
+	// char character;
+	// myfile.seekg(position_begining_of_welcome);
+	// myfile.seekg(white_space_to_get_content_in_welcome, ios::cur);
+	// int position;
+	// while ((position = (int) myfile.tellg()) <= end_of_welcome){
+	// 	myfile.get(character);
+	// 	if (character == '\n'){
+	// 		cout << character;
+	// 		myfile.seekg(white_space_to_get_content_in_welcome, ios::cur);
+	// 	}
+	// 	else if (character == '\"' or character == ','){
+
+	// 	} else {
+	// 		cout << character;
+	// 	}
+
+	// }
+	// cout << '\n';
+	// myfile.close();
