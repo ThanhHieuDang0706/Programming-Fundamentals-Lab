@@ -43,13 +43,22 @@ void printArray(int option, int arr[10][10]){
         }
         case 4 : {
             int sum_row_max = 0;
-            int sum_row_max_index;
+            int sum_row_max_index = 0;
             for (int i = 0; i < 10; ++i) {
-                
+                int sum_row = 0;
                 for (int j = 0; j < 10; ++j) {
-                    sum_row
+                    sum_row += arr[i][j];
+                }
+                if (i == 0) sum_row = sum_row_max;
+                else {
+                    if (sum_row > sum_row_max) {
+                        sum_row_max = sum_row;
+                        sum_row_max_index = i;
+                    }
                 }
             }
+            cout << sum_row_max_index;
+            break;
         }
     }
 
