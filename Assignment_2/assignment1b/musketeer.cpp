@@ -17,6 +17,8 @@ using namespace std;
 void combat(int hp1, int hp2, int d) {
     // TODO: You have to complete this function followed by requirements
     
+
+
 }
 
 int readFile(string filename, int& hp1, int& hp2, int& d) {
