@@ -6,7 +6,7 @@
 using namespace std;
 
 /* Write the code to calculate and print to screen */
-void multipleMatrix(int mA, int nA, int A[2][2], int mB, int nB, int B[2][2]) {
+void multipleMatrix(int mA, int nA, int A[4][5], int mB, int nB, int B[5][3]) {
     if (nA != mB) {
         cout << "-1";
         return;
@@ -25,20 +25,25 @@ void multipleMatrix(int mA, int nA, int A[2][2], int mB, int nB, int B[2][2]) {
             cout << mutiply_matrix[i][j];
             if (j != (nB - 1)) cout << ' ';
         }
-        cout << endl;
+        if (i != (mA - 1)) cout << endl;
     }
     
 }
 
 int main () {
-    int a[2][2] = {
-        {2, 1},
-        {3, 4}
+    int a[4][5] = {
+        {1,2,3,4,5},
+        {2,3,4,5,6},
+        {3,4,5,6,7},
+        {4,5,6,7,8}
     };
-    int b[2][2] = {
-        {3,1},
-        {1, 1}
+    int b[5][3] = {
+        {8,6,7},
+        {7,3,5},
+        {1,9,5},
+        {3,4,6},
+        {2,1,9}
     };
-    multipleMatrix(2, 2, a, 2, 2, b);
+    multipleMatrix(4, 5, a, 5, 3, b);
     return 0;
 }
