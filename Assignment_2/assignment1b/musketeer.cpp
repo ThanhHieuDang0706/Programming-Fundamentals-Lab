@@ -16,7 +16,30 @@ using namespace std;
 
 void combat(int hp1, int hp2, int d) {
     // TODO: You have to complete this function followed by requirements
+    double p;
+    double p1 = (double)hp1 * (double)(1000.00l - d) / (double)1000.00;
+    double p2 = (double)hp2 * (double)d / (double)1000.00;
+    int h1 = (hp1 + hp2) % 100;
+    int h2 = (h1 * hp2) % 100;
+
+    p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
+
+    if (p < 0.00l) p = 0.00l;
+    if (p > 1.00l) p = 1.00l;
     
+    // Mau = 0
+    if (((double)h1 * p1 + (double)h2 * p2) == 0.00l) {
+        if (h1 == 0 && h2 ==0) p = 0.00l;
+        else if (p1 < p2) p = 0.00l;
+        else p = 1.00l;
+    }
+
+
+
+
+
+    /* process the output */
+    cout << p;
 
 
 }
