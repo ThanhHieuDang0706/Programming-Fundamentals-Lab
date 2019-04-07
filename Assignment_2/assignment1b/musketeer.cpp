@@ -34,8 +34,6 @@ void combat(int hp1, int hp2, int d) {
         else p = 1.00l;
     }   
 
-
-
     if (hp2 != 888) {
         switch (hp1) {
             case 777: {
@@ -49,7 +47,7 @@ void combat(int hp1, int hp2, int d) {
             }
         
             case 888 : { 
-                h1 *= 10; // Don't chang h2 accordingly
+                h1 *= 10; // Don't change h2 accordingly
                 p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
                 break;
             }
@@ -59,23 +57,30 @@ void combat(int hp1, int hp2, int d) {
                 break;    
             }   
         }
+        if (d != 987) {
+            if ((hp1 == 220 && hp2 == 284) || (hp1 == 284 && hp2 == 220)) p = 0.50l; 
+        }
+        else {
+            if ((h1 + h2) != 99) {
+                if (hp1 != 999) p = 0.00l;
+            }
+        }
     } 
     else {
         switch (hp1) {
             case 777 : break;
             case 888 : break;
             case 900 : break;
+            case 999 : {
+                p = 1.00l;
+                break;
+            }
             default : {
                 p = 0.01l;
                 break;
             }
         }      
     }
-
-    // cout << p << endl;
-
-    
-
 
     /* process the output */
 
@@ -108,5 +113,5 @@ int main(int argc, char** argv) {
     //     else cout << "Cannot read input file";
     // }
     // else cout << "Incorrect arguments format";
-    combat(900,888,700);
+    combat(831,66,987);
 }
