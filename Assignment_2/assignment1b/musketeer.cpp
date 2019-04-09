@@ -34,6 +34,12 @@ void combat(int hp1, int hp2, int d) {
         else p = 1.00l;
     }   
 
+        /* Since if hp2 = 888 and hp1 = special numbers
+        all of the ablilities of hp1 will be useless 
+        so we will consider 2 conditions of hp2 here
+        Attention that in each condition of hp2 I use switch case statements
+        because writing with if else statement is super complicated
+        especially with the case of hp == 882 */
     if (hp2 != 888) {
         switch (hp1) {
             case 777: {
@@ -57,17 +63,18 @@ void combat(int hp1, int hp2, int d) {
                 break;    
             }   
         }
-        if (d != 987) {
+
+        if (d != 987) { // Since with d = 987 and with special pairs of hp1 and hp2 below, it will end up a different result
             if ((hp1 == 220 && hp2 == 284) || (hp1 == 284 && hp2 == 220)) p = 0.50l; 
         }
-        else {
-            if ((h1 + h2) != 99) {
+        else { // in the case of d = 987 we have 2 situations as below
+            if ((h1 + h2) != 99) { 
                 if (hp1 != 999) p = 0.00l;
             }
         }
     } 
     else {
-        switch (hp1) {
+        switch (hp1) { // At this point writing if statement here would be the pain in the ass
             case 777 : break;
             case 888 : break;
             case 900 : break;
@@ -84,7 +91,7 @@ void combat(int hp1, int hp2, int d) {
 
     /* process the output */
 
-    cout.precision(2);
+    cout.precision(2); 
     cout.setf(ios::fixed, ios::floatfield);
     cout << p;
 
@@ -113,5 +120,4 @@ int main(int argc, char** argv) {
         else cout << "Cannot read input file";
     }
     else cout << "Incorrect arguments format";
-    combat(831,66,987);
 }
