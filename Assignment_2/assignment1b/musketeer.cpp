@@ -24,12 +24,13 @@ void combat(int hp1, int hp2, int d) {
     int h2 = (h1 * hp2) % 100;
 
     p = ((float)h1 * p1 - (float)h2 * p2) / ((float)h1 * p1 + (float)h2 * p2);
+    // process as described if p is negative or greater than 0
 
     if (p < 0.00l) p = 0.00f;
     if (p > 1.00l) p = 1.00f;
-    //FAILED TESTCASE 38 ONLY
-    // I dont understand
+
     // Mau = 0
+    
     if (((float)h1 * p1 + (float)h2 * p2) == 0.) {
         if (h1 == 0 && h2 ==0) p = 0.00f;
         else if (p1 < p2) p = 0.00f;
