@@ -92,12 +92,7 @@ void combat(int hp1, int hp2, int d) {
     }
 
     /* process the output */
-
-    cout.precision(2); 
-    cout.setf(ios::fixed, ios::floatfield);
-    cout << p;
-
-
+    cout << fixed << setprecision(2) << p;
 }
 
 int readFile(string filename, int& hp1, int& hp2, int& d) {
