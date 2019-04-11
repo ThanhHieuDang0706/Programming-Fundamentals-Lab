@@ -28,6 +28,7 @@ void combat(int hp1, int hp2, int d) {
     if (p < 0.00l) p = 0.00l;
     if (p > 1.00l) p = 1.00l;
     //FAILED TESTCASE 38 ONLY
+    // I dont understand
     // Mau = 0
     if (((double)h1 * p1 + (double)h2 * p2) == 0.00l) {
         if (h1 == 0 && h2 ==0) p = 0.00l;
