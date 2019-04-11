@@ -17,23 +17,23 @@ using namespace std;
 
 void combat(int hp1, int hp2, int d) {
     // TODO: You have to complete this function followed by requirements
-    double p;
-    double p1 = (double)hp1 * (double)(1000.00l - d) / (double)1000.00;
-    double p2 = (double)hp2 * (double)d / (double)1000.00;
+    float p;
+    float p1 = (float)hp1 * (float)(1000.00l - d) / (float)1000.00;
+    float p2 = (float)hp2 * (float)d / (float)1000.00;
     int h1 = (hp1 + hp2) % 100;
     int h2 = (h1 * hp2) % 100;
 
-    p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
+    p = ((float)h1 * p1 - (float)h2 * p2) / ((float)h1 * p1 + (float)h2 * p2);
 
-    if (p < 0.00l) p = 0.00l;
-    if (p > 1.00l) p = 1.00l;
+    if (p < 0.00l) p = 0.00f;
+    if (p > 1.00l) p = 1.00f;
     //FAILED TESTCASE 38 ONLY
     // I dont understand
     // Mau = 0
-    if (((double)h1 * p1 + (double)h2 * p2) == 0.00l) {
-        if (h1 == 0 && h2 ==0) p = 0.00l;
-        else if (p1 < p2) p = 0.00l;
-        else p = 1.00l;
+    if (((float)h1 * p1 + (float)h2 * p2) == 0.) {
+        if (h1 == 0 && h2 ==0) p = 0.00f;
+        else if (p1 < p2) p = 0.00f;
+        else p = 1.00f;
     }   
 
         /* Since if hp2 = 888 and hp1 = special numbers
@@ -47,31 +47,31 @@ void combat(int hp1, int hp2, int d) {
             case 777: {
                     if (p1 < p2 || h1 < h2) {
                     d = 1;
-                    p1 = (double)hp1 * (double)(1000.00l - d) / (double)1000.00;
-                    p2 = (double)hp2 * (double)d / (double)1000.00;
-                    p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
+                    p1 = (float)hp1 * (float)(1000.00f - d) / (float)1000.00;
+                    p2 = (float)hp2 * (float)d / (float)1000.00;
+                    p = ((float)h1 * p1 - (float)h2 * p2) / ((float)h1 * p1 + (float)h2 * p2);
                 }
                     break;
             }
         
             case 888 : { 
                 h1 *= 10; // Don't change h2 accordingly
-                p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
+                p = ((float)h1 * p1 - (float)h2 * p2) / ((float)h1 * p1 + (float)h2 * p2);
                 break;
             }
     
             case 900 : {
-                if  (p < 0.50l) p = 0.50l;
+                if  (p < 0.50f) p = 0.50f;
                 break;    
             }   
         }
 
         if (d != 987) { // Since with d = 987 and with special pairs of hp1 and hp2 below, it will end up a different result
-            if ((hp1 == 220 && hp2 == 284) || (hp1 == 284 && hp2 == 220)) p = 0.50l; 
+            if ((hp1 == 220 && hp2 == 284) || (hp1 == 284 && hp2 == 220)) p = 0.50f; 
         }
         else { // in the case of d = 987 we have 2 situations as below
             if ((h1 + h2) != 99) { 
-                if (hp1 != 999) p = 0.00l;
+                if (hp1 != 999) p = 0.00f;
             }
         }
     } 
@@ -81,11 +81,11 @@ void combat(int hp1, int hp2, int d) {
             case 888 : break;
             case 900 : break;
             case 999 : {
-                p = 1.00l;
+                p = 1.00f;
                 break;
             }
             default : {
-                p = 0.01l;
+                p = 0.01f;
                 break;
             }
         }      
