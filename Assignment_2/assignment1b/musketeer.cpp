@@ -24,9 +24,10 @@ void combat(int hp1, int hp2, int d) {
 
     p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
 
+    //process p as described if p is negative or greater than 1
     if (p < 0.00l) p = 0.00l;
     if (p > 1.00l) p = 1.00l;
-    //FAILED TESTCASE 38 ONLY
+
     // Mau = 0
     if (((double)h1 * p1 + (double)h2 * p2) == 0.00l) {
         if (h1 == 0 && h2 ==0) p = 0.00l;
@@ -40,6 +41,7 @@ void combat(int hp1, int hp2, int d) {
         Attention that in each condition of hp2 I use switch case statements
         because writing with if else statement is super complicated
         especially with the case of hp == 882 */
+        
     if (hp2 != 888) {
         switch (hp1) {
             case 777: {
