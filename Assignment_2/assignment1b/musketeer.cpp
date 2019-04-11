@@ -73,7 +73,7 @@ void combat(int hp1, int hp2, int d) {
             }
         }
     } 
-    else {
+    else { // hp2 = 888 
         switch (hp1) { // At this point writing if statement here would be the pain in the ass
             case 777 : break;
             case 888 : break;
