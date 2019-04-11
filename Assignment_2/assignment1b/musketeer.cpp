@@ -12,6 +12,7 @@
 #include <fstream>
 #include <string>
 #include <math.h>
+#include <iomanip>
 using namespace std;
 
 void combat(int hp1, int hp2, int d) {
@@ -91,33 +92,34 @@ void combat(int hp1, int hp2, int d) {
 
     /* process the output */
 
-    cout.precision(2); 
-    cout.setf(ios::fixed, ios::floatfield);
-    cout << p;
+    
+    cout << fixed << setprecision(2) << p;
 
 
 }
 
-int readFile(string filename, int& hp1, int& hp2, int& d) {
-    ifstream myfile(filename);
-    if (myfile.is_open()) {
-        myfile >> hp1 >> hp2 >> d;
+// int readFile(string filename, int& hp1, int& hp2, int& d) {
+//     ifstream myfile(filename);
+//     if (myfile.is_open()) {
+//         myfile >> hp1 >> hp2 >> d;
 
-        return 1;
-    }
-    else return 0;
-}
+//         return 1;
+//     }
+//     else return 0;
+// }
 
 int main(int argc, char** argv) {
-    if (argc == 2) {
-        int hp1 = 0;
-        int hp2 = 0;
-        int d = 0;
+    // if (argc == 2) {
+    //     int hp1 = 0;
+    //     int hp2 = 0;
+    //     int d = 0;
 
-        int readInput = readFile(argv[1], hp1, hp2, d);
+    //     int readInput = readFile(argv[1], hp1, hp2, d);
         
-        if (readInput) combat(hp1, hp2, d);
-        else cout << "Cannot read input file";
-    }
-    else cout << "Incorrect arguments format";
+    //     if (readInput) combat(hp1, hp2, d);
+    //     else cout << "Cannot read input file";
+    // }
+    // else cout << "Incorrect arguments format";
+    combat(900, 888, 700);
+    return 0;
 }
