@@ -122,7 +122,8 @@ void combat(int hp1, int hp2, int d) {
                             p = 0.01l;
                             break;
                         }
-                    }                  
+                    }
+                    break;                  
                 }
                 default : {
                     switch (hp1) {
@@ -192,6 +193,6 @@ int main(int argc, char** argv) {
     //     else cout << "Cannot read input file";
     // }
     // else cout << "Incorrect arguments format";
-    combat(999,888, 700);
+    combat(777,188, 500);
     return 0;
 }
