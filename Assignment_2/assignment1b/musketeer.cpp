@@ -96,6 +96,73 @@ void combat(int hp1, int hp2, int d) {
     //     }      
     // }
 
+
+    switch (d) {
+        case 987: {
+            if (h1 + h2 != 99) {
+                if (hp1 != 999) p = 0.00l;
+            }
+            break;
+        }
+        default: {
+            switch (hp2) {
+                case 888: {
+                    switch(hp1) {
+                        case 777 : break;
+                        case 888 : break;
+                        case 900 : break;
+                        case 999 : {
+                        //     if (d == 987) {
+                        //     break;
+                        // }
+                            p = 1.00l;
+                            break;
+                        }
+                        default : {
+                            p = 0.01l;
+                            break;
+                        }
+                    }                  
+                }
+                default : {
+                    switch (hp1) {
+                        case 777: {
+                                if (p1 < p2 || h1 < h2) {
+                                    d = 1;
+                                    p1 = (double)hp1 * (double)(1000.00l - d) / (double)1000.00;
+                                    p2 = (double)hp2 * (double)d / (double)1000.00;
+                                    p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
+                            }
+                            break;
+                        }
+
+                        case 888 : { 
+                            h1 *= 10; // Don't change h2 accordingly
+                            p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
+                            break;
+                        }
+
+                        case 900 : {
+                            if  (p < 0.50l) p = 0.50l;
+                            break;    
+                        }   
+                    }
+
+                    if (d != 987) { // Since with d = 987 and with special pairs of hp1 and hp2 below, it will end up a different result
+                        if ((hp1 == 220 && hp2 == 284) || (hp1 == 284 && hp2 == 220)) p = 0.50l; 
+                    }
+                    else { // in the case of d = 987 we have 2 situations as below
+                        if ((h1 + h2) != 99) { 
+                            if (hp1 != 999) p = 0.00l;
+                        }
+                    }
+                    break;   
+                } 
+            }
+        }
+    }
+
+
     /* process the output */
     cout << fixed << setprecision(2) << p;
 
@@ -125,6 +192,6 @@ int main(int argc, char** argv) {
     //     else cout << "Cannot read input file";
     // }
     // else cout << "Incorrect arguments format";
-
+    combat(999,888, 700);
     return 0;
 }
