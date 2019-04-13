@@ -26,8 +26,8 @@ void combat(int hp1, int hp2, int d) {
     p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
 
     //process p as described if p is negative or greater than 1
-    // if (p < 0.00l) p = 0.00l;
-    // if (p > 1.00l) p = 1.00l;
+    if (p <= 0.00l) p = 0.00l;
+    else if (p >= 1.00l) p = 1.00l;
 
     // Mau = 0
     if (((double)h1 * p1 + (double)h2 * p2) == 0.00l) {
@@ -43,54 +43,58 @@ void combat(int hp1, int hp2, int d) {
         because writing with if else statement is super complicated
         especially with the case of hp == 882 */
         
-    if (hp2 != 888) {
-        switch (hp1) {
-            case 777: {
-                    if (p1 < p2 || h1 < h2) {
-                    d = 1;
-                    p1 = (double)hp1 * (double)(1000.00l - d) / (double)1000.00;
-                    p2 = (double)hp2 * (double)d / (double)1000.00;
-                    p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
-                }
-                    break;
-            }
+    // if (hp2 != 888) {
+    //     switch (hp1) {
+    //         case 777: {
+    //                 if (p1 < p2 || h1 < h2) {
+    //                 d = 1;
+    //                 p1 = (double)hp1 * (double)(1000.00l - d) / (double)1000.00;
+    //                 p2 = (double)hp2 * (double)d / (double)1000.00;
+    //                 p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
+    //             }
+    //                 break;
+    //         }
         
-            case 888 : { 
-                h1 *= 10; // Don't change h2 accordingly
-                p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
-                break;
-            }
+    //         case 888 : { 
+    //             h1 *= 10; // Don't change h2 accordingly
+    //             p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
+    //             break;
+    //         }
     
-            case 900 : {
-                if  (p < 0.50l) p = 0.50l;
-                break;    
-            }   
-        }
+    //         case 900 : {
+    //             if  (p < 0.50l) p = 0.50l;
+    //             break;    
+    //         }   
+    //     }
 
-        if (d != 987) { // Since with d = 987 and with special pairs of hp1 and hp2 below, it will end up a different result
-            if ((hp1 == 220 && hp2 == 284) || (hp1 == 284 && hp2 == 220)) p = 0.50l; 
-        }
-        else { // in the case of d = 987 we have 2 situations as below
-            if ((h1 + h2) != 99) { 
-                if (hp1 != 999) p = 0.00l;
-            }
-        }
-    } 
-    else { // hp2 = 888 
-        switch (hp1) { // At this point writing if statement here would be the pain in the ass
-            case 777 : break;
-            case 888 : break;
-            case 900 : break;
-            case 999 : {
-                p = 1.00l;
-                break;
-            }
-            default : {
-                p = 0.01l;
-                break;
-            }
-        }      
-    }
+    //     if (d != 987) { // Since with d = 987 and with special pairs of hp1 and hp2 below, it will end up a different result
+    //         if ((hp1 == 220 && hp2 == 284) || (hp1 == 284 && hp2 == 220)) p = 0.50l; 
+    //     }
+    //     else { // in the case of d = 987 we have 2 situations as below
+    //         if ((h1 + h2) != 99) { 
+    //             if (hp1 != 999) p = 0.00l;
+    //         }
+    //     }
+    // } 
+
+    // else { // hp2 = 888 
+    //     switch (hp1) { // At this point writing if statement here would be the pain in the ass
+    //         case 777 : break;
+    //         case 888 : break;
+    //         case 900 : break;
+    //         case 999 : {
+    //             if (d == 987) {
+    //                 break;
+    //             }
+    //             p = 1.00l;
+    //             break;
+    //         }
+    //         default : {
+    //             p = 0.01l;
+    //             break;
+    //         }
+    //     }      
+    // }
 
     /* process the output */
     cout << fixed << setprecision(2) << p;
@@ -106,6 +110,7 @@ int readFile(string filename, int& hp1, int& hp2, int& d) {
     //     return 1;
     // }
     // else return 0;
+    return 0;
 }
 
 int main(int argc, char** argv) {
@@ -120,4 +125,6 @@ int main(int argc, char** argv) {
     //     else cout << "Cannot read input file";
     // }
     // else cout << "Incorrect arguments format";
+
+    return 0;
 }
