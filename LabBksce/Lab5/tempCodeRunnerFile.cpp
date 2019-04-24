@@ -1,0 +1,1 @@
+max_len_of_substring = T[i][j];
