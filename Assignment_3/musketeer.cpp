@@ -14,22 +14,25 @@ bool isPrimeNumber(int);
 
 void advanture(int R, int N, int ID, int M, int* E, int nEvents) {
     // TODO: Simulate the advanture of musketeer
+    const int original_hp[5] = {0, 999, 900, 888, 777};
+
     int hp;
+
     switch (ID) {
         case 1: {
-            hp = 999;
+            hp = original_hp[ID];
             break;
         }
         case 2: {
-            hp = 900;
+            hp = original_hp[ID];
             break;
         }
         case 3: {
-            hp = 888;
+            hp = original_hp[ID];
             break;
         }
         case 4: {
-            hp = 777;
+            hp = original_hp[ID];
             break;
         }
     }
@@ -48,6 +51,7 @@ void advanture(int R, int N, int ID, int M, int* E, int nEvents) {
             cout << R;
             return;
         }
+
         if (hp <= 0) {
             cout << -1;
             return;
@@ -56,9 +60,8 @@ void advanture(int R, int N, int ID, int M, int* E, int nEvents) {
         // events processing
 
         if (E[i-1] == 0) ++kim_cuong;
-
         else if (E[i-1] > 99 and E[i-1] < 200) {
-            switch(ID) {
+            switch(ID) { // gap ve binh
                 case 2: {
                     int h1 = i % (100 + R);
                     int h2 = E[i-1] % (100 + R);
@@ -81,6 +84,31 @@ void advanture(int R, int N, int ID, int M, int* E, int nEvents) {
                     break;
                 }
             }
+
+            if (E[i-1] == 1) { // nha tro
+                switch (ID) {
+                    case 2: {
+                        int P = R;
+                        do {
+                            --P;
+                        } while (!isPrimeNumber(P));
+
+                        while (hp < original_hp[ID] && M-P >= 0 && M>2) {
+                            ++hp;
+                            M -= P;
+                        }
+                        break;
+                    }
+                    default: {
+                        while (hp < original_hp[ID] & M > 0) {
+                            ++hp;
+                            --M;
+                        }
+                        break;
+                    }
+                }
+            }
+            
             
         }
 
@@ -89,6 +117,8 @@ void advanture(int R, int N, int ID, int M, int* E, int nEvents) {
     cout << 0;
 
 }
+
+
 
 bool isPrimeNumber(int num) {
     if (num < 2) return false;
