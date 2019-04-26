@@ -34,7 +34,7 @@ int readFile(string filename, int& R, int& N, int& ID, int& M, int*& E) {
         
         while (events.length() > 0) {
             spacePosition = events.find(' ', 0);
-            if (spacePosition == -1) break;
+            if (spacePosition == -1) continue;
             E[index++] = stoi(events.substr(0, spacePosition));
             events = events.substr(spacePosition + 1);
         }

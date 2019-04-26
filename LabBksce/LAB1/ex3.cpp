@@ -14,23 +14,23 @@ void calculateAndPrintResult(int a, int b, int option){
      switch (option) {
           case 1:
                cout << a + b << endl;
-               break;
+               continue;
           case 2:
                cout << a - b << endl;
-               break;
+               continue;
           case 3:
                cout << a * b << endl;
-               break;
+               continue;
           case 4:
                if (b == 0) {
                     cout << "Do not divided " << a << " by zero!" << endl;
-                    break;
+                    continue;
                } else {
                     cout << (float) a / b << endl;
-                    break;
+                    continue;
                }
           case 5:
                cout << a*a + b*b << endl;
-               break;
+               continue;
      }
 }

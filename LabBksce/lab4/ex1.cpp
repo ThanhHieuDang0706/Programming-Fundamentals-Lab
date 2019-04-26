@@ -18,7 +18,7 @@ void printArray(int option, int arr[10][10]){
                     if (i != 9 && j != 9) cout << ' ';
                 }
             }
-            break;
+            continue;
         }
         case 2 : {
             int sum = 0;
@@ -28,7 +28,7 @@ void printArray(int option, int arr[10][10]){
                 }
             }
             cout << sum;
-            break;
+            continue;
         }
         case 3 : {
             for (int i = 0; i < 10; ++i) {
@@ -39,7 +39,7 @@ void printArray(int option, int arr[10][10]){
                 cout << sum_column;
                 if (i != 9) cout << ' ';
             }
-            break;
+            continue;
         }
         case 4 : {
             int sum_row_max = 0;
@@ -58,7 +58,7 @@ void printArray(int option, int arr[10][10]){
                 }
             }
             cout << sum_row_max_index;
-            break;
+            continue;
         }
     }
 

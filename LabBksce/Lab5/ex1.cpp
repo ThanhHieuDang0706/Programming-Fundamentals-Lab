@@ -27,7 +27,7 @@ void process_minus (const char * inputText, int &i) {
             else 
             {
                 negative = true;
-                break;
+                continue;
             }
         }
 
@@ -66,7 +66,7 @@ void process(char* inputText) {
                 if (inputText[tmp] == '0') ++tmp;
                 else {
                     negative = true;
-                    break;
+                    continue;
                 }
             }
         

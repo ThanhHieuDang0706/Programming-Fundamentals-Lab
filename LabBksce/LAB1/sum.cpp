@@ -18,11 +18,11 @@ double calculateSum(int n, int k, int option) {
     switch (option) {
         case 1: {
             sum = floor(sum * pow(10, k)) / pow(10, k);
-            break;
+            continue;
         }
         case 2: {
             sum = round (sum * pow (10, k)) / pow(10, k);
-            break;
+            continue;
         }
         case 3: {
             sum = ceil (sum);

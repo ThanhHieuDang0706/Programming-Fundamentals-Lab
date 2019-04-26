@@ -19,12 +19,12 @@ float convertTemperature (float temperature, int option, int isRound) {
           case 1: {
                // Fahrenheit to Celcius
                result = (temperature - 32) * 5 / 9;
-               break;
+               continue;
           }
           case 2: {
                // Celciu(s to Farenheit
                result = (temperature * 9 / 5) + 32;
-               break;
+               continue;
           }
      }
 

@@ -41,28 +41,28 @@ void combat(int hp1, int hp2, int d) {
             if (h1 + h2 != 99) {
                 if (hp1 != 999) p = 0.00l;
             }
-            break;
+            continue;
         }
         default: {
             switch (hp2) {
                 case 888: {
                     switch(hp1) {
-                        case 777 : break;
-                        case 888 : break;
-                        case 900 : break;
+                        case 777 : continue;
+                        case 888 : continue;
+                        case 900 : continue;
                         case 999 : {
                         //     if (d == 987) {
-                        //     break;
+                        //     continue;
                         // }
                             p = 1.00l;
-                            break;
+                            continue;
                         }
                         default : {
                             p = 0.01l;
-                            break;
+                            continue;
                         }
                     }
-                    break;                  
+                    continue;                  
                 }
                 default : {
                     switch (hp1) {
@@ -73,18 +73,18 @@ void combat(int hp1, int hp2, int d) {
                                     p2 = (double)hp2 * (double)d / (double)1000.00;
                                     p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
                             }
-                            break;
+                            continue;
                         }
 
                         case 888 : { 
                             h1 *= 10; // Don't change h2 accordingly
                             p = ((double)h1 * p1 - (double)h2 * p2) / ((double)h1 * p1 + (double)h2 * p2);
-                            break;
+                            continue;
                         }
 
                         case 900 : {
                             if  (p < 0.50l) p = 0.50l;
-                            break;    
+                            continue;    
                         }   
                     }
 
@@ -96,7 +96,7 @@ void combat(int hp1, int hp2, int d) {
                             if (hp1 != 999) p = 0.00l;
                         }
                     }
-                    break;   
+                    continue;   
                 } 
             }
         }

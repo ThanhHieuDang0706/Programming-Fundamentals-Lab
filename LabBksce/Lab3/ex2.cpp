@@ -14,7 +14,7 @@ void minMax(int option, int numberOfElements, int arr[]){
                     min = arr[i];
             }
             cout << "min is " << min;
-            break;
+            continue;
         }
         case 2: {//max
             int max = arr[0];
@@ -23,7 +23,7 @@ void minMax(int option, int numberOfElements, int arr[]){
                     max = arr[i];
             }
             cout << "max is " << max;           
-            break;
+            continue;
         }
         case 3: {
             int min = arr[0];
@@ -38,7 +38,7 @@ void minMax(int option, int numberOfElements, int arr[]){
             }
             cout << "min is " << min << '\n'
                  << "max is " << max;    
-            break;
+            continue;
         }
     }
 

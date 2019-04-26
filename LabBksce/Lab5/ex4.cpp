@@ -45,7 +45,7 @@ void upper_pritext (char*text, char* pritext) {
         else {
             while(text[n] != ' ') {
                 ++n;
-                if (text[n] == '\0') break;
+                if (text[n] == '\0') continue;
             }
         }
         ++n;
