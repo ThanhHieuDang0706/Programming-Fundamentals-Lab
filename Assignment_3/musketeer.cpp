@@ -295,13 +295,13 @@ bool isFibo(int n) {
     return (Fibonacci(tmp) == n);
 }
 
-int main () {
-    int R = 0;
-    int N = 12;
-    int ID = 1;
-    int M = 300;
-    int e[] = {0, 101,999};
-    int ne = sizeof(e)/sizeof(int);
-    advanture(R,N,ID,M,e,ne);
-    return 0;
-}
+// int main () {
+//     int R = 0;
+//     int N = 12;
+//     int ID = 1;
+//     int M = 300;
+//     int e[] = {0, 101,999};
+//     int ne = sizeof(e)/sizeof(int);
+//     advanture(R,N,ID,M,e,ne);
+//     return 0;
+// }
