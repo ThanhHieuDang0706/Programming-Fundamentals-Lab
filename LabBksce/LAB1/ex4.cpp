@@ -13,7 +13,7 @@ int getElement (int a, int b, int c, int d, int e, int option, int K = 0){
                          max = arr[i];
                }
                return max;
-               continue;
+               break;
           }
           case 2:{
                int min = arr[0];
@@ -22,7 +22,7 @@ int getElement (int a, int b, int c, int d, int e, int option, int K = 0){
                          min = arr[i];
                }
                return min;
-               continue;
+               break;
           }
           case 3:{
                for (int i = 0; i < 5; ++i){
@@ -35,7 +35,7 @@ int getElement (int a, int b, int c, int d, int e, int option, int K = 0){
                     }
                }
                return arr[2];
-               continue;
+               break;
           }
           case 5:{
                cout << "Nhap so nguyen K : ";
@@ -55,7 +55,7 @@ int getElement (int a, int b, int c, int d, int e, int option, int K = 0){
                     if (d[i] == max)
                          return arr[i];
                }
-               continue;
+               break;
           }
           case 4:{
                cout << "Nhap so nguyen K : ";
@@ -75,7 +75,7 @@ int getElement (int a, int b, int c, int d, int e, int option, int K = 0){
                     if (d[i] == min)
                          return arr[i];
                }
-               continue;
+               break;
           }
 
      }

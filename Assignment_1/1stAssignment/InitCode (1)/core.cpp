@@ -223,7 +223,7 @@ void displayWelcome(){
 		size_t chu_cai_ngay_truoc_so_thu_tu = line.at(i).find("e");
 		size_t do_dai_de_lay_ky_tu_so_start = dau_ngoac_kep_thu_hai - chu_cai_ngay_truoc_so_thu_tu; 
 //		cout << line.at(i).substr(chu_cai_ngay_truoc_so_thu_tu + 1, do_dai_de_lay_ky_tu_so_start + 1) << endl;
-		order.push_back(line.at(i).substr(chu_cai_ngay_truoc_so_thu_tu + 1, do_dai_de_lay_ky_tu_so_start + 1));	// THE DIFFERENCE from DisplayMenu. Don't know why.?
+		order.push_back(line.at(i).substr(chu_cai_ngay_truoc_so_thu_tu + 1, do_dai_de_lay_ky_tu_so_start + 1));	
 	}
 	// convert the order to integer for swapping and comparing
 	vector <int> order_in_number;

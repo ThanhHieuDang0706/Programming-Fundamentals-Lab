@@ -27,19 +27,16 @@ int readFile(string filename, int& R, int& N, int& ID, int& M, int*& E) {
             if (events.at(i) == ' ') numOfSpaces++;
         }
 
-        E = new int[numOfSpaces + 1];
+        int numOfEvents = numOfSpaces + 1;
 
-        int index = 0;
-        int spacePosition = 0;
+        E = new int[numOfEvents];
+
+        stringstream ss(events);
+
+        for (int i = 0; i < numOfEvents; i++)
+            ss >> E[i];
         
-        while (events.length() > 0) {
-            spacePosition = events.find(' ', 0);
-            if (spacePosition == -1) continue;
-            E[index++] = stoi(events.substr(0, spacePosition));
-            events = events.substr(spacePosition + 1);
-        }
-        
-        result = numOfSpaces + 1;
+        result = numOfEvents;
     }
     else result = 0;
 

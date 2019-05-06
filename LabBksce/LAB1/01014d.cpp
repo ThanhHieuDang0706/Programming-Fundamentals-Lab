@@ -18,121 +18,121 @@ void getTextOfLessThan4DigitsNumber(int number){
      switch (hang_tram) {
           case 1: {
                text = "mot tram ";
-               continue;
+               break;
           }
           case 2: {
                text = "hai tram ";
-               continue;
+               break;
           }
           case 3: {
                text = "ba tram ";
-               continue;
+               break;
           }
           case 4: {
                text = "bon tram ";
-               continue;
+               break;
           }
           case 5: {
                text = "nam tram ";
-               continue;
+               break;
           }
           case 6: {
                text = "sau tram ";
-               continue;
+               break;
           }
           case 7: {
                text = "bay tram ";
-               continue;
+               break;
           }
           case 8: {
                text = "tam tram ";
-               continue;
+               break;
           }
           case 9: {
                text = "chin tram ";
-               continue;
+               break;
           }
      }
 
      switch (hang_chuc) {
           case 0: {
                text += "le ";
-               continue;
+               break;
           }
           case 1: {
                text += "mot muoi ";
-               continue;
+               break;
           }
           case 2: {
                text += "hai muoi ";
-               continue;
+               break;
           }
           case 3: {
                text += "ba muoi ";
-               continue;
+               break;
           }
           case 4: {
                text += "bon muoi ";
-               continue;
+               break;
           }
           case 5: {
                text += "nam muoi ";
-               continue;
+               break;
           }
           case 6: {
                text += "sau muoi ";
-               continue;
+               break;
           }
           case 7: {
                text += "bay muoi ";
-               continue;
+               break;
           }
           case 8: {
                text += "tam muoi ";
-               continue;
+               break;
           }
           case 9: {
                text += "chin muoi ";
-               continue;
+               break;
           }
      }
 
      switch (hang_don_vi) {
           case 1: {
                text += "mot";
-               continue;
+               break;
           }
           case 2: {
                text += "hai";
-               continue;
+               break;
           }
           case 3: {
                text += "ba";
-               continue;
+               break;
           }
           case 4: {
                text += "bon";
-               continue;
+               break;
           }
           case 5: {
                text += "lam";
-               continue;
+               break;
           }
           case 6: {
                text += "sau";
-               continue;
+               break;
           }
           case 7: {
                text += "bay";
-               continue;
+               break;
           }
           case 8: {
                text += "tam";
-               continue;
+               break;
           }
           case 9: {
                text += "chin";
-               continue;
+               break;
           }
      }
 

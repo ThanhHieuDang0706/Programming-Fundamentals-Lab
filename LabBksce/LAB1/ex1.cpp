@@ -21,21 +21,21 @@ void print_number (float number, int option) {
      switch (option) {
           case 1: {
                cout << round(number) << endl;
-               continue;
+               break;
           }
           case 2: {
                number = ceil(number);
                cout << number << endl;
-               continue;
+               break;
           }
           case 3: {
                cout <<  floor(number) << endl;
-               continue;
+               break;
           }
           case 4: {
                number = roundf(number * 100) / 100;
                cout << number << endl;
-               continue;
+               break;
           }
 
      }

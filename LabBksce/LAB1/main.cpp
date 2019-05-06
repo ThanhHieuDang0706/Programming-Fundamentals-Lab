@@ -20,39 +20,39 @@ void getText (int number) {
     switch (hang_chuc) {
     case 1:{
     text = "mười";
-    continue;
+    break;
     }
     case 2:{
     text = "hai mươi";
-    continue;
+    break;
     }
     case 3: {
     text = "ba mươi";
-    continue;
+    break;
     }
     case 4: {
     text = "bốn mươi";
-    continue;
+    break;
     }
     case 5: {
     text = "năm mươi";
-    continue;
+    break;
     }
     case 6: {
     text = "sáu mươi";
-    continue;
+    break;
     }
     case 7: {
     text = "bảy mươi";
-    continue;
+    break;
     }
     case 8: {
     text = "tám mươi";
-    continue;
+    break;
     }
     case 9: {
     text = "chín mươi";
-    continue;
+    break;
     }
     }
 
@@ -64,41 +64,41 @@ void getText (int number) {
     switch (hang_don_vi) {
     case 1:{
     text += "một";
-    continue;
+    break;
     }
     case 2:{
     text += "hai";
-    continue;
+    break;
     }
     case 3: {
    text += "ba";
-    continue;
+    break;
     }
     case 4: {
     text += "bốn";
-    continue;
+    break;
     }
     case 5: {
     if (hang_chuc == 0)
         text += "năm";
     else text += "lăm";
-    continue;
+    break;
     }
     case 6: {
     text += "sáu";
-    continue;
+    break;
     }
     case 7: {
     text += "bảy";
-    continue;
+    break;
     }
     case 8: {
     text += "tám";
-    continue;
+    break;
     }
     case 9: {
     text += "chín"; 
-    continue;
+    break;
     }
     }
     cout << text;
